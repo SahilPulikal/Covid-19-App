@@ -2,13 +2,6 @@
 
 This will help you stay updated with the current Corona virus count in India and across the world. It also includes a self-assessment with helplines and test centers in each state and basic preventive measures
 
-**[Video Demonstration](https://youtu.be/mwbOuzhrOaA)**
-
-## Preview
-
-![MockUp1](https://github.com/Rajdeep-Ray/COVID-19-App/blob/master/myMockups/Mockup1.PNG)
-![MockUp2](https://github.com/Rajdeep-Ray/COVID-19-App/blob/master/myMockups/Mockup2.PNG)
-![MockUp3](https://github.com/Rajdeep-Ray/COVID-19-App/blob/master/myMockups/Mockup3.PNG)
 
 ## Hardware and Software requirements
 
@@ -21,9 +14,6 @@ Reqirement for the app are as follows
 * `Mobile OS` : **Android** Jelly Bean or **newer**
 * `Mobile hardware` : **ARM Android devices**.
 
-## Process Flow and Data Flow Diagram
-
-![FlowDiagram](https://github.com/Rajdeep-Ray/COVID-19-App/blob/master/myMockups/flowdiagram.png)
 
 ## APIs
 
