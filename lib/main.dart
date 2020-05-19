@@ -12,13 +12,17 @@ import 'myScreens/myStatsDetails.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+<<<<<<< HEAD
   // This widget is the root of your application Hi.
+=======
+  // This widget is the root of your application.
+>>>>>>> 3c641b087a3dae44be3d3f61eeaa17a42a48017b
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          color: Colors.blueAccent,
+          color: Colors.purpleAccent,
         ),
       ),
       debugShowCheckedModeBanner: false,
