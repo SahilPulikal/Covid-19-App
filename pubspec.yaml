@@ -49,7 +49,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Product Sans
+      fonts:
+        - asset: fonts/Product Sans Regular.ttf
+        - asset: fonts/Product Sans Italic.ttf
+        - asset: fonts/Product Sans Bold.ttf
+        - asset: fonts/Product Sans Bold Italic.ttf
+          style: italic
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

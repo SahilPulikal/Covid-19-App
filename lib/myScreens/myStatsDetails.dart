@@ -34,7 +34,7 @@ class _MyDetailState extends State<MyDetail> {
         appBar: AppBar(
           title: Text(
             "Indian States",
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
           ),
         ),
         body: Stack(
@@ -51,8 +51,11 @@ class _MyDetailState extends State<MyDetail> {
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                   Text(
-                    "\nLoading..",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    "\nLoading...",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'Product Sans'),
                   )
                 ],
               ),
@@ -66,7 +69,7 @@ class _MyDetailState extends State<MyDetail> {
         bottomOpacity: 0,
         title: Text(
           "Indian States",
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
         ),
       ),
       body: Stack(
@@ -90,7 +93,9 @@ class _MyDetailState extends State<MyDetail> {
                         title: Text(
                           data['data']['regional'][i]['loc'],
                           style: TextStyle(
-                              fontSize: 23, fontWeight: FontWeight.w500),
+                              fontSize: 23,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Product Sans'),
                         ),
                       ),
                       Padding(
@@ -134,7 +139,7 @@ class _MyDetailState extends State<MyDetail> {
                                 style: TextStyle(color: Colors.black),
                                 children: [
                                   TextSpan(
-                                      text: "Confirmed cases (Foreign) :\t"),
+                                      text: "Confirmed Cases (Foreign) :\t"),
                                   TextSpan(
                                       text:
                                           "${data['data']['regional'][i]['confirmedCasesForeign'].toString()}",
@@ -235,8 +240,11 @@ class _MyDetailGlobalState extends State<MyDetailGlobal> {
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                   Text(
-                    "\nLoading..",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    "\nLoading...",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'Product Sans'),
                   )
                 ],
               ),
@@ -274,6 +282,7 @@ class _MyDetailGlobalState extends State<MyDetailGlobal> {
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
+                            fontFamily: 'Product Sans',
                           ),
                         ),
                       ],
@@ -302,7 +311,8 @@ class _MyDetailGlobalState extends State<MyDetailGlobal> {
                                   data['data'][i]['location'].toString(),
                                   style: TextStyle(
                                       fontSize: 25,
-                                      fontWeight: FontWeight.w500),
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: 'Product Sans'),
                                 ),
                               ),
                               Padding(

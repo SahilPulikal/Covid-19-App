@@ -39,6 +39,7 @@ class _MyTestCentersState extends State<MyTestCenters> {
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
+                            fontFamily: 'Product Sans',
                           ),
                         ),
                       ],
@@ -54,6 +55,7 @@ class _MyTestCentersState extends State<MyTestCenters> {
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.w700,
+                          fontFamily: 'Product Sans',
                         ),
                       ),
                     ),
@@ -191,6 +193,7 @@ class _InMyStateState extends State<InMyState> {
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.w500,
+                          fontFamily: 'Product Sans',
                         ),
                       ),
                       subtitle: Text(
@@ -256,7 +259,8 @@ class _MyLocCard extends StatelessWidget {
       child: ListTile(
         title: Text(_str),
         onTap: () async {
-          final String url = 'https://www.google.com/maps/search/?api=1&query=$_map';
+          final String url =
+              'https://www.google.com/maps/search/?api=1&query=$_map';
           if (await canLaunch(url)) {
             await launch(url);
           } else {

@@ -53,6 +53,7 @@ class _MyStatsState extends State<MyStats> {
                         color: Colors.white,
                         fontSize: 40,
                         fontWeight: FontWeight.w700,
+                        fontFamily: 'Product Sans',
                       ),
                     ),
                     subtitle: Text(
@@ -61,6 +62,7 @@ class _MyStatsState extends State<MyStats> {
                         color: Colors.white,
                         fontSize: 30,
                         fontWeight: FontWeight.w600,
+                        fontFamily: 'Product Sans',
                       ),
                     ),
                     trailing: IconButton(
@@ -80,12 +82,16 @@ class _MyStatsState extends State<MyStats> {
                       title: Text(
                         "Total Cases",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w700),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: 'Product Sans'),
                       ),
                       trailing: Text(
                         data['data']['summary']['total'].toString(),
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w900),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w800, //900
+                            fontFamily: 'Product Sans'),
                       ),
                     )),
                 Padding(padding: EdgeInsets.all(5)),
@@ -95,7 +101,8 @@ class _MyStatsState extends State<MyStats> {
                   child: ListTile(
                     title: Text(
                       "Indian Cases",
-                      style: TextStyle(fontSize: 20),
+                      style:
+                          TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                     ),
                     trailing: Text(
                       data['data']['summary']['confirmedCasesIndian']
@@ -103,7 +110,8 @@ class _MyStatsState extends State<MyStats> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
-                          color: Colors.indigoAccent),
+                          color: Colors.indigoAccent,
+                          fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
@@ -114,7 +122,8 @@ class _MyStatsState extends State<MyStats> {
                   child: ListTile(
                     title: Text(
                       "Foreign Cases",
-                      style: TextStyle(fontSize: 20),
+                      style:
+                          TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                     ),
                     trailing: Text(
                       data['data']['summary']['confirmedCasesForeign']
@@ -122,7 +131,8 @@ class _MyStatsState extends State<MyStats> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
-                          color: Colors.deepOrangeAccent),
+                          color: Colors.deepOrangeAccent,
+                          fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
@@ -133,14 +143,16 @@ class _MyStatsState extends State<MyStats> {
                   child: ListTile(
                     title: Text(
                       "Recovered",
-                      style: TextStyle(fontSize: 20),
+                      style:
+                          TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                     ),
                     trailing: Text(
                       data['data']['summary']['discharged'].toString(),
                       style: TextStyle(
                           fontSize: 20,
                           color: Colors.teal,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
@@ -151,14 +163,16 @@ class _MyStatsState extends State<MyStats> {
                   child: ListTile(
                     title: Text(
                       "Deaths",
-                      style: TextStyle(fontSize: 20),
+                      style:
+                          TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                     ),
                     trailing: Text(
                       data['data']['summary']['deaths'].toString(),
                       style: TextStyle(
                           fontSize: 20,
                           color: Colors.redAccent,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
@@ -169,14 +183,16 @@ class _MyStatsState extends State<MyStats> {
                   child: ListTile(
                     title: Text(
                       "Active Cases",
-                      style: TextStyle(fontSize: 20),
+                      style:
+                          TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                     ),
                     trailing: Text(
                       " ${int.parse(data['data']['summary']['total'].toString()) - int.parse(data['data']['summary']['deaths'].toString()) - int.parse(data['data']['summary']['discharged'].toString())}",
                       style: TextStyle(
                           fontSize: 20,
                           color: Colors.orangeAccent,
-                          fontWeight: FontWeight.w700),
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
@@ -190,7 +206,8 @@ class _MyStatsState extends State<MyStats> {
                       children: <Widget>[
                         Text(
                           "List of Indian States",
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(
+                              fontSize: 18, fontFamily: 'Product Sans'),
                         ),
                         SizedBox(
                           width: 10,
@@ -222,7 +239,8 @@ class _MyStatsState extends State<MyStats> {
                       children: <Widget>[
                         Text(
                           "Global Statistics",
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(
+                              fontSize: 18, fontFamily: 'Product Sans'),
                         ),
                         SizedBox(
                           width: 10,
@@ -305,6 +323,7 @@ class _MyStatsGlobalState extends State<MyStatsGlobal> {
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
+                            fontFamily: 'Product Sans',
                           ),
                         ),
                       ],
@@ -320,14 +339,16 @@ class _MyStatsGlobalState extends State<MyStatsGlobal> {
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.w700,
+                          fontFamily: 'Product Sans',
                         ),
                       ),
                       subtitle: Text(
                         "Global Statistics*",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 30,
+                          fontSize: 28,
                           fontWeight: FontWeight.w600,
+                          fontFamily: 'Product Sans',
                         ),
                       ),
                       trailing: IconButton(
@@ -347,12 +368,16 @@ class _MyStatsGlobalState extends State<MyStatsGlobal> {
                         title: Text(
                           "Total Cases",
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w700),
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'Product Sans'),
                         ),
                         trailing: Text(
                           data['data']['confirmed'].toString(),
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w900),
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              fontFamily: 'Product Sans'),
                         ),
                       )),
                   Padding(padding: EdgeInsets.all(5)),
@@ -361,15 +386,17 @@ class _MyStatsGlobalState extends State<MyStatsGlobal> {
                         borderRadius: BorderRadius.circular(10.0)),
                     child: ListTile(
                       title: Text(
-                        "Recoverd",
-                        style: TextStyle(fontSize: 20),
+                        "Recovered",
+                        style:
+                            TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                       ),
                       trailing: Text(
                         data['data']['recovered'].toString(),
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
-                            color: Colors.teal),
+                            color: Colors.teal,
+                            fontFamily: 'Product Sans'),
                       ),
                     ),
                   ),
@@ -380,14 +407,16 @@ class _MyStatsGlobalState extends State<MyStatsGlobal> {
                     child: ListTile(
                       title: Text(
                         "Deaths",
-                        style: TextStyle(fontSize: 20),
+                        style:
+                            TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                       ),
                       trailing: Text(
                         data['data']['deaths'].toString(),
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
-                            color: Colors.redAccent),
+                            color: Colors.redAccent,
+                            fontFamily: 'Product Sans'),
                       ),
                     ),
                   ),
@@ -398,14 +427,16 @@ class _MyStatsGlobalState extends State<MyStatsGlobal> {
                     child: ListTile(
                       title: Text(
                         "Active Cases",
-                        style: TextStyle(fontSize: 20),
+                        style:
+                            TextStyle(fontSize: 20, fontFamily: 'Product Sans'),
                       ),
                       trailing: Text(
                         data['data']['active'].toString(),
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.orangeAccent,
-                            fontWeight: FontWeight.w700),
+                            fontWeight: FontWeight.w700,
+                            fontFamily: 'Product Sans'),
                       ),
                     ),
                   ),
@@ -419,8 +450,9 @@ class _MyStatsGlobalState extends State<MyStatsGlobal> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            "Detail Statistics",
-                            style: TextStyle(fontSize: 18),
+                            "Detailed Statistics",
+                            style: TextStyle(
+                                fontSize: 18, fontFamily: 'Product Sans'),
                           ),
                           SizedBox(
                             width: 10,

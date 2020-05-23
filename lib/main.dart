@@ -139,8 +139,11 @@ class MyLoadingScreen extends StatelessWidget {
                 valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
               ),
               Text(
-                "\nLoading..",
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                "\nLoading...",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontFamily: 'Product Sans'),
               ),
             ],
           ),

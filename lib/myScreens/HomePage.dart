@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 50,
+                        fontFamily: 'Product Sans',
                         fontWeight: FontWeight.w700),
                   ),
                   subtitle: Text(
@@ -32,6 +33,7 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
+                      fontFamily: 'Product Sans',
                     ),
                   ),
                 ),
@@ -49,7 +51,8 @@ class HomePage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w500)),
                       TextSpan(
-                          text: " will help you stay updated with the current Corona virus count in India and across the world. It also includes a self-assessment with helplines and test centers in each state and basic preventive measures"),
+                          text:
+                              " will help you stay updated with the current Corona virus count in India and across the world. It also includes a self-assessment with helplines and test centers in each state and basic preventive measures"),
                     ],
                   ),
                 ),

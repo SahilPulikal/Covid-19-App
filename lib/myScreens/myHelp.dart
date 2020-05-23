@@ -34,14 +34,16 @@ class _MyHelpState extends State<MyHelp> {
                         color: Colors.white,
                         fontSize: 40,
                         fontWeight: FontWeight.w700,
+                        fontFamily: 'Product Sans',
                       ),
                     ),
                     subtitle: Text(
-                      "Helplines..",
+                      "Helplines...",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,
                         fontWeight: FontWeight.w600,
+                        fontFamily: 'Product Sans',
                       ),
                     ),
                   ),
@@ -60,7 +62,14 @@ class _MyHelpState extends State<MyHelp> {
                       Icons.more_vert,
                       size: 30,
                     ),
-                    title: Text("More helplines"),
+                    title: Text(
+                      "More helplines",
+                      style: TextStyle(
+//            fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                        fontFamily: 'Product Sans',
+                      ),
+                    ),
                     trailing: Icon(Icons.arrow_forward_ios),
                     onTap: () => Navigator.pushNamed(context, '/MoreHelplines'),
                   ),
@@ -73,7 +82,14 @@ class _MyHelpState extends State<MyHelp> {
                       Icons.help_outline,
                       size: 30,
                     ),
-                    title: Text("FAQs"),
+                    title: Text(
+                      "FAQs",
+                      style: TextStyle(
+//            fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                        fontFamily: 'Product Sans',
+                      ),
+                    ),
                     trailing: Icon(Icons.arrow_forward_ios),
                     onTap: () async {
                       const url = 'https://www.mohfw.gov.in/pdf/FAQ.pdf';
@@ -90,9 +106,10 @@ class _MyHelpState extends State<MyHelp> {
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white, fontFamily: 'Product Sans'),
                       children: [
-                        TextSpan(text: "Designed and Developed by\t"),
+                        TextSpan(text: "Designed and Developed with ❤ by\t"),
                         TextSpan(
                           text:
                               "\nStudents at KC College of Engineering,Thane(E)",
@@ -132,7 +149,10 @@ class NearHospital extends StatelessWidget {
           MaterialCommunityIcons.google_maps,
           size: 30,
         ),
-        title: Text("Visit nearest Hospital"),
+        title: Text(
+          "Visit nearest Hospital",
+          style: TextStyle(fontFamily: 'Product Sans', fontSize: 16),
+        ),
         trailing: Icon(Icons.arrow_forward_ios),
         onTap: () async {
           const url =
@@ -160,8 +180,9 @@ class MoHW extends StatelessWidget {
             title: Text(
               "Ministry of Health & Family Welfare",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 19,
                 fontWeight: FontWeight.w500,
+                fontFamily: 'Product Sans',
               ),
               textAlign: TextAlign.center,
             ),
@@ -175,10 +196,15 @@ class MoHW extends StatelessWidget {
               ),
               title: Row(
                 children: <Widget>[
-                  Text("Call\t"),
+                  Text(
+                    "Call ",
+                    style: TextStyle(fontFamily: 'Product Sans'),
+                  ),
                   Text(
                     "1075",
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontFamily: 'Product Sans'),
                   ),
                 ],
               ),
@@ -201,11 +227,14 @@ class MoHW extends StatelessWidget {
                 Ionicons.ios_call,
                 size: 30,
               ),
-              title: Text("Helpline Number"),
+              title: Text("Helpline Number",
+                  style: TextStyle(fontFamily: 'Product Sans')),
               subtitle: Text(
                 "+91-11-23978046",
-                style:
-                    TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
+                style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: Colors.black,
+                    fontFamily: 'Product Sans'),
               ),
               onTap: () async {
                 const phoneNo = 'tel:+91-11-23978046';
@@ -225,11 +254,14 @@ class MoHW extends StatelessWidget {
                 Entypo.mail,
                 size: 28,
               ),
-              title: Text("Helpline Email ID"),
+              title: Text("Helpline Email ID",
+                  style: TextStyle(fontFamily: 'Product Sans')),
               subtitle: Text(
                 "ncov2019@gov.in",
-                style:
-                    TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
+                style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: Colors.black,
+                    fontFamily: 'Product Sans'),
               ),
               onTap: () async {
                 const mailTo =
@@ -306,6 +338,7 @@ class _MoreHelplinesState extends State<MoreHelplines> {
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
+                            fontFamily: 'Product Sans',
                           ),
                         ),
                       ],
@@ -329,12 +362,19 @@ class _MoreHelplinesState extends State<MoreHelplines> {
                           ),
                           trailing: Icon(Icons.arrow_forward_ios),
                           title: Text(
-                              "${data['data']['contacts']['regional'][i]['loc'].toString()}"),
+                            "${data['data']['contacts']['regional'][i]['loc'].toString()}",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                              fontFamily: 'Product Sans',
+                            ),
+                          ),
                           subtitle: Text(
                             "${data['data']['contacts']['regional'][i]['number'].toString().split(',')[0]}",
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 16,
+                              fontFamily: 'Product Sans',
                             ),
                           ),
                           onTap: () async {
@@ -370,7 +410,14 @@ class AllMyTestCenters extends StatelessWidget {
           MaterialCommunityIcons.hospital_building,
           size: 30,
         ),
-        title: Text("Test Centers"),
+        title: Text(
+          "Test Centers",
+          style: TextStyle(
+//            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            fontFamily: 'Product Sans',
+          ),
+        ),
         trailing: Icon(Icons.arrow_forward_ios),
         onTap: () => Navigator.pushNamed(context, '/TestCenters'),
       ),

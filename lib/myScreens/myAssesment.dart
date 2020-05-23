@@ -29,6 +29,7 @@ class _MyAssesmentState extends State<MyAssesment> {
                         color: Colors.white,
                         fontSize: 40,
                         fontWeight: FontWeight.w700,
+                        fontFamily: 'Product Sans',
                       ),
                     ),
                     subtitle: Text(
@@ -37,6 +38,7 @@ class _MyAssesmentState extends State<MyAssesment> {
                         color: Colors.white,
                         fontSize: 25,
                         fontWeight: FontWeight.w500,
+                        fontFamily: 'Product Sans',
                       ),
                     ),
                   ),
@@ -58,7 +60,9 @@ class _MyAssesmentState extends State<MyAssesment> {
                           child: Text(
                             "Take Assesment",
                             style: TextStyle(
-                                color: Colors.blueAccent, fontSize: 17),
+                                color: Colors.blueAccent,
+                                fontSize: 18,
+                                fontFamily: 'Product Sans'),
                           ),
                         ),
                       ),
@@ -76,7 +80,9 @@ class _MyAssesmentState extends State<MyAssesment> {
                           child: Text(
                             "Test Centers",
                             style: TextStyle(
-                                color: Colors.blueAccent, fontSize: 17),
+                                color: Colors.blueAccent,
+                                fontSize: 18,
+                                fontFamily: 'Product Sans'),
                           ),
                         ),
                       ),
@@ -136,6 +142,7 @@ class _MyQuizState extends State<MyQuiz> {
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
+                            fontFamily: 'Product Sans',
                           ),
                         ),
                       ],
@@ -156,6 +163,7 @@ class _MyQuizState extends State<MyQuiz> {
                                   color: Colors.white,
                                   fontSize: 35,
                                   fontWeight: FontWeight.w500,
+                                  fontFamily: 'Product Sans',
                                 ),
                               ),
                               subtitle: Text(
@@ -163,6 +171,7 @@ class _MyQuizState extends State<MyQuiz> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
+                                  fontFamily: 'Product Sans',
                                 ),
                               ),
                             ),
@@ -183,12 +192,14 @@ class _MyQuizState extends State<MyQuiz> {
                                         "\tDisclaimer!",
                                         style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: 25),
+                                            fontSize: 25,
+                                            fontFamily: 'Product Sans'),
                                       ),
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 5,bottom: 8,right: 5),
+                                    padding: const EdgeInsets.only(
+                                        left: 5, bottom: 8, right: 5),
                                     child: ListTile(
                                       title: Text(
                                         "The purpose of this self-assessment is to help you make decisions about seeking appropriate medical care. This system is not intended for the diagnosis or treatment of disease or other conditions, including COVID-19.\n\nThis system does not replace the judgment of healthcare professionals or the performance of any clinical assessment.\n\nTo provide information on the right level of care, we are going to ask you a series of questions.",
@@ -212,7 +223,8 @@ class _MyQuizState extends State<MyQuiz> {
                                               Text(
                                                 "I don't Agree",
                                                 style: TextStyle(
-                                                    color: Colors.white),
+                                                    color: Colors.white,
+                                                    fontFamily: 'Product Sans'),
                                               ),
                                             ],
                                           ),
@@ -234,8 +246,8 @@ class _MyQuizState extends State<MyQuiz> {
                                                 style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 16,
-                                                    fontWeight:
-                                                        FontWeight.w500),
+                                                    fontWeight: FontWeight.w500,
+                                                    fontFamily: 'Product Sans'),
                                               ),
                                               Padding(
                                                   padding: EdgeInsets.all(2)),
@@ -312,7 +324,8 @@ class Ques6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _QuesFormat(
-        "Do you have symptoms like dry cough, fever or difficulty in breathing?", '/ques7');
+        "Do you have symptoms like dry cough, fever or difficulty in breathing?",
+        '/ques7');
   }
 }
 
@@ -351,6 +364,7 @@ class _QuesFormat extends StatelessWidget {
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
+                            fontFamily: 'Product Sans',
                           ),
                         ),
                         SizedBox(
@@ -381,6 +395,7 @@ class _QuesFormat extends StatelessWidget {
                                         _str,
                                         style: TextStyle(
                                           fontSize: 18,
+                                          fontFamily: 'Product Sans',
                                         ),
                                       ),
                                     ),
@@ -396,8 +411,10 @@ class _QuesFormat extends StatelessWidget {
                                           },
                                           child: Text(
                                             "No",
-                                            style:
-                                                TextStyle(color: Colors.white),
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                                fontFamily: 'Product Sans'),
                                           ),
                                           color: Colors.blueAccent,
                                         ),
@@ -413,8 +430,10 @@ class _QuesFormat extends StatelessWidget {
                                           },
                                           child: Text(
                                             "Yes",
-                                            style:
-                                                TextStyle(color: Colors.white),
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                                fontFamily: 'Product Sans'),
                                           ),
                                           color: Colors.blueAccent,
                                         ),
@@ -476,6 +495,7 @@ class QuesResult extends StatelessWidget {
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
+                                fontFamily: 'Product Sans',
                               ),
                             ),
                           ],
@@ -492,6 +512,7 @@ class QuesResult extends StatelessWidget {
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
+                                fontFamily: 'Product Sans',
                               ),
                             ),
                             SizedBox(
@@ -514,7 +535,7 @@ class QuesResult extends StatelessWidget {
                         children: <Widget>[
                           _point >= 4
                               ? _SuspectCard()
-                              : (_point >=2 ? _IsolateCard() : _SafeCard()),
+                              : (_point >= 2 ? _IsolateCard() : _SafeCard()),
                           Padding(padding: EdgeInsets.all(5)),
                           Expanded(
                             child: ListView(
@@ -559,7 +580,8 @@ class _SafeCard extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.deepOrange,
                   fontSize: 25,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: 'Product Sans',
                 ),
               ),
             ),
@@ -597,6 +619,7 @@ class _SuspectCard extends StatelessWidget {
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
+                  fontFamily: 'Product Sans',
                 ),
               ),
             ),
@@ -605,7 +628,6 @@ class _SuspectCard extends StatelessWidget {
               child: Text(
                 "Immediate medical attention is needed. Tell the medical personal if you have been in contact with someone with COVID-19 or if you have recently been to an area where COVID-19 is spreading.\n\n*This result is one basis of your response",
                 style: TextStyle(color: Colors.white, fontSize: 16),
-                
               ),
             )
           ],
@@ -632,6 +654,7 @@ class _IsolateCard extends StatelessWidget {
                   color: Colors.deepOrangeAccent,
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
+                  fontFamily: 'Product Sans',
                 ),
               ),
             ),
