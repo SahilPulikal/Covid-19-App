@@ -1,13 +1,118 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class MyTestCenters extends StatefulWidget {
   @override
   _MyTestCentersState createState() => _MyTestCentersState();
 }
 
+class _MyTestCentersState3 extends State<MyTestCenters> {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('Test Centers'),
+            backgroundColor: Colors.blueAccent,
+          ),
+          body: Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: WebView(
+                javascriptMode: JavascriptMode.unrestricted,
+                initialUrl: 'https://covid.bhaarat.ai/testingcentres',
+              )),
+        ),
+      ),
+    );
+  }
+}
+
 class _MyTestCentersState extends State<MyTestCenters> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: WebView(
+                javascriptMode: JavascriptMode.unrestricted,
+                initialUrl: 'https://covid.bhaarat.ai/testingcentres',
+              )),
+          Container(
+//            color: Colors.blueAccent,
+            height: 75,
+            decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(15.0),
+                    bottomRight: Radius.circular(15.0))),
+          ),
+          SafeArea(
+            child: Padding(
+              padding: EdgeInsets.all(5),
+              child: Column(
+                children: <Widget>[
+                  FlatButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "Test Centers",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Product Sans',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  /*Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+                    child: ListTile(
+                      title: Text(
+                        "Test Centers",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'Product Sans',
+                        ),
+                      ),
+                    ),
+                  ),*/
+
+//                  Expanded(child: MyFireStore()),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+//All the below code is disabled.
+class _MyTestCentersState1 extends State<MyTestCenters> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +165,8 @@ class _MyTestCentersState extends State<MyTestCenters> {
                       ),
                     ),
                   ),
-                  Expanded(child: MyFireStore()),
+
+//                  Expanded(child: MyFireStore()),
                 ],
               ),
             ),
