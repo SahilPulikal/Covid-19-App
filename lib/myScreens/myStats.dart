@@ -35,7 +35,26 @@ class _MyStatsState extends State<MyStats> {
     return Stack(
       children: <Widget>[
         Container(
-          color: Colors.blueAccent,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  stops: [
+                0.1,
+                0.2,
+                0.4,
+                0.6,
+                0.9
+              ],
+                  colors: [
+                Colors.purple,
+                Colors.indigo,
+                Colors.blue,
+                Colors.cyan,
+                Colors.blueAccent
+//                Colors.teal,
+              ])),
+//          color: Colors.blueAccent,
         ),
         SafeArea(
           child: Padding(

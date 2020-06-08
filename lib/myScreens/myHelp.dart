@@ -16,7 +16,26 @@ class _MyHelpState extends State<MyHelp> {
     return Stack(
       children: <Widget>[
         Container(
-          color: Colors.blueAccent,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  stops: [
+                0.1,
+                0.2,
+                0.4,
+                0.6,
+                0.7,
+              ],
+                  colors: [
+                Colors.purple,
+                Colors.indigo,
+                Colors.blue,
+                Colors.cyan,
+                Colors.blueAccent
+//                Colors.teal,
+              ])),
+//          color: Colors.blueAccent,
         ),
         SafeArea(
           child: Padding(
@@ -101,6 +120,8 @@ class _MyHelpState extends State<MyHelp> {
                     },
                   ),
                 ),
+                Padding(padding: EdgeInsets.all(5)),
+                About(),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: RichText(
@@ -313,7 +334,26 @@ class _MoreHelplinesState extends State<MoreHelplines> {
       body: Stack(
         children: <Widget>[
           Container(
-            color: Colors.blueAccent,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    stops: [
+                  0.1,
+                  0.2,
+                  0.4,
+                  0.6,
+                  0.9
+                ],
+                    colors: [
+                  Colors.purple,
+                  Colors.indigo,
+                  Colors.blue,
+                  Colors.cyan,
+                  Colors.blueAccent
+//                Colors.teal,
+                ])),
+//            color: Colors.blueAccent,
           ),
           SafeArea(
             child: Column(
@@ -412,6 +452,31 @@ class AllMyTestCenters extends StatelessWidget {
         ),
         title: Text(
           "Test Centers",
+          style: TextStyle(
+//            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            fontFamily: 'Product Sans',
+          ),
+        ),
+        trailing: Icon(Icons.arrow_forward_ios),
+        onTap: () => Navigator.pushNamed(context, '/TestCenters'),
+      ),
+    );
+  }
+}
+
+class About extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.all(5),
+      child: ListTile(
+        leading: Icon(
+          MaterialCommunityIcons.information,
+          size: 30,
+        ),
+        title: Text(
+          "About",
           style: TextStyle(
 //            fontWeight: FontWeight.w600,
             fontSize: 16,

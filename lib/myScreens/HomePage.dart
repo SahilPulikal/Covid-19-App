@@ -9,7 +9,26 @@ class HomePage extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          color: Colors.blueAccent,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  stops: [
+                0.1,
+                0.2,
+                0.4,
+                0.6,
+                0.8
+              ],
+                  colors: [
+                Colors.purple,
+                Colors.indigo,
+                Colors.blue,
+                Colors.cyan,
+                Colors.blueAccent
+//                Colors.teal,
+              ])),
+//          color: Colors.blueAccent,
         ),
         SafeArea(
           child: Column(
@@ -61,60 +80,79 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    StreamBuilder<QuerySnapshot>(
-                      stream: Firestore.instance
-                          .collection("myCarousel")
-                          .snapshots(),
-                      builder: (BuildContext context,
-                          AsyncSnapshot<QuerySnapshot> snapshot) {
-                        if (snapshot.hasError)
-                          return new Text('Error: ${snapshot.error}');
-                        switch (snapshot.connectionState) {
-                          case ConnectionState.waiting:
-                            return Center(
-                              child: CircularProgressIndicator(),
-                            );
-                          default:
-                            return new CarouselSlider(
-                              autoPlayAnimationDuration:
-                                  Duration(milliseconds: 900),
-                              autoPlay: true,
-                              pauseAutoPlayOnTouch: Duration(seconds: 3),
-                              height: 150,
-                              enlargeCenterPage: true,
-                              items: snapshot.data.documents.map(
-                                (DocumentSnapshot document) {
-                                  if (document['type']
-                                          .toString()
-                                          .compareTo('inlink') ==
-                                      0) {
-                                    return _MyCarouselBodyInlink(
-                                        document['title'],
-                                        document['subtitle'],
-                                        document['button'],
-                                        document['nav']);
-                                  } else if (document['type']
-                                          .toString()
-                                          .compareTo('outlink') ==
-                                      0) {
-                                    return _MyCarouselBodyOutlink(
-                                        document['title'],
-                                        document['subtitle'],
-                                        document['button'],
-                                        document['nav']);
-                                  } else if (document['type']
-                                          .toString()
-                                          .compareTo('nolink') ==
-                                      0) {
-                                    return null;
-                                  }
-                                  return null;
-                                },
-                              ).toList(),
-                            );
-                        }
-                      },
+                    Padding(padding: EdgeInsets.all(20)),
+                    RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      elevation: 15,
+                      color: Colors.white,
+                      onPressed: () => Navigator.pushNamed(context, '/News'),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Text(
+                          "Covid-19 News",
+                          style: TextStyle(
+                              color: Colors.blueAccent,
+                              fontSize: 18,
+                              fontFamily: 'Product Sans'),
+                        ),
+                      ),
                     ),
+//                    StreamBuilder<QuerySnapshot>(
+//                      stream: Firestore.instance
+//                          .collection("myCarousel")
+//                          .snapshots(),
+//                      builder: (BuildContext context,
+//                          AsyncSnapshot<QuerySnapshot> snapshot) {
+//                        if (snapshot.hasError)
+//                          return new Text('Error: ${snapshot.error}');
+//                        switch (snapshot.connectionState) {
+//                          case ConnectionState.waiting:
+//                            return Center(
+//                              child: CircularProgressIndicator(),
+//                            );
+//                          default:
+//                            return new CarouselSlider(
+//                              autoPlayAnimationDuration:
+//                                  Duration(milliseconds: 900),
+//                              autoPlay: true,
+//                              pauseAutoPlayOnTouch: Duration(seconds: 3),
+//                              height: 150,
+//                              enlargeCenterPage: true,
+//                              items: snapshot.data.documents.map(
+//                                (DocumentSnapshot document) {
+//                                  if (document['type']
+//                                          .toString()
+//                                          .compareTo('inlink') ==
+//                                      0) {
+//                                    return _MyCarouselBodyInlink(
+//                                        document['tf      itle'],
+//                                        document['subtitle'],
+//                                        document['button'],
+//                                        document['nav']);
+//                                  } else if (document['type']
+//                                          .toString()
+//                                          .compareTo('outlink') ==
+//                                      0) {
+//                                    return _MyCarouselBodyOutlink(
+//                                        document['title'],
+//                                        document['subtitle'],
+//                                        document['button'],
+//                                        document['nav']);
+//                                  } else if (document['type']
+//                                          .toString()
+//                                          .compareTo('nolink') ==
+//                                      0) {
+//                                    return null;
+//                                  }
+//                                  return null;
+//                                },
+//                              ).toList(),
+//                            );
+//                        }
+//                      },
+//                    ),
                     Padding(padding: EdgeInsets.all(10)),
                   ],
                 ),

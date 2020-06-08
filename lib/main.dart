@@ -8,6 +8,7 @@ import 'myScreens/myStats.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'myScreens/myStatsDetails.dart';
+import 'myScreens/news.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/globeDetail': (context) => MyDetailGlobal(),
         '/MoreHelplines': (context) => MoreHelplines(),
         '/TestCenters': (context) => MyTestCenters(),
+        '/News': (context) => News(),
         '/ques1': (context) => Ques1(),
         '/ques2': (context) => Ques2(),
         '/ques3': (context) => Ques3(),
@@ -76,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
       default:
         return new Container(
-          color: Colors.blueAccent,
+          color: Colors.transparent,
           child: Center(
             child: ListTile(
               title: Icon(
@@ -103,7 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
         height: 60.0,
         items: <Widget>[
           Icon(Icons.home, size: 30),
-          Icon(Icons.format_list_bulleted, size: 30),
+          Icon(Icons.timeline, size: 30),
+//          Icon(Icons.format_list_bulleted, size: 30),
           Icon(FontAwesome.user_md, size: 30),
           Icon(Icons.info_outline, size: 30),
           Icon(Icons.help_outline, size: 30),
@@ -129,7 +132,26 @@ class MyLoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.blueAccent,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                stops: [
+              0.1,
+              0.2,
+              0.4,
+              0.6,
+              0.9
+            ],
+                colors: [
+              Colors.purple,
+              Colors.indigo,
+              Colors.blue,
+              Colors.cyan,
+              Colors.blueAccent
+//                Colors.teal,
+            ])),
+//        color: Colors.blueAccent,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

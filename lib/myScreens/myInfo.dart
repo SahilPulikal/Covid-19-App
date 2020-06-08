@@ -12,7 +12,26 @@ class _MyInfoState extends State<MyInfo> {
     return Stack(
       children: <Widget>[
         Container(
-          color: Colors.blueAccent,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  stops: [
+                0.05,
+                0.2,
+                0.4,
+                0.6,
+                0.75,
+              ],
+                  colors: [
+                Colors.purple,
+                Colors.indigo,
+                Colors.blue,
+                Colors.cyan,
+                Colors.blueAccent
+//                Colors.teal,
+              ])),
+//          color: Colors.blueAccent,
         ),
         SafeArea(
           child: Padding(
