@@ -120,8 +120,8 @@ class _MyHelpState extends State<MyHelp> {
                     },
                   ),
                 ),
-                Padding(padding: EdgeInsets.all(5)),
-                About(),
+//                Padding(padding: EdgeInsets.all(5)),
+//                About(),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: RichText(
