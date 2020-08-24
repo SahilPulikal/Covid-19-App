@@ -2,15 +2,25 @@
 
 This will help you stay updated with the current Corona virus count in India and across the world. It also includes a self-assessment with helplines and test centers in each state and basic preventive measures
 
-<!--
-**[Video Demonstration](https://youtu.be/mwbOuzhrOaA)**
+## Screenshots
 
-## Preview
+<p float="center">
+  <img src="screenshots/Screen%20(1).png" width="200" /> 
+  <img src="screenshots/Screen%20(2).png" width="200" /> 
+  <img src="screenshots/Screen%20(3).png" width="200" /> 
+  <img src="screenshots/Screen%20(4).png" width="200" /> 
+  <img src="screenshots/Screen%20(5).png" width="200" />
+  <img src="screenshots/Screen%20(6).png" width="200" /> 
+  <img src="screenshots/Screen%20(7).png" width="200" /> 
+  <img src="screenshots/Screen%20(8).png" width="200" /> 
+  <img src="screenshots/Screen%20(9).png" width="200" /> 
+  <img src="screenshots/Screen%20(10).png" width="200" />
+  <img src="screenshots/Screen%20(11).png" width="200" /> 
+  <img src="screenshots/Screen%20(12).png" width="200" /> 
+  <img src="screenshots/Screen%20(13).png" width="200" /> 
+  <img src="screenshots/Screen%20(14).png" width="200" /> 
 
-![MockUp1](https://github.com/SahilPulikal/COVID-19-App/blob/master/myMockups/Mockup1.PNG)
-![MockUp2](https://github.com/SahilPulikal/COVID-19-App/blob/master/myMockups/Mockup2.PNG)
-![MockUp3](https://github.com/SahilPulikal/COVID-19-App/blob/master/myMockups/Mockup3.PNG)
--->
+</p>
 
 ## Hardware and Software requirements
 
