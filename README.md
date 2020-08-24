@@ -2,6 +2,10 @@
 
 This will help you stay updated with the current Corona virus count in India and across the world. It also includes a self-assessment with helplines and test centers in each state and basic preventive measures
 
+## Download APK
+* [Click here to Download APK](https://github.com/SahilPulikal/Covid-19-App/releases/download/v1/Kc.covid.app.apk)
+* [GitHub Releases](https://github.com/SahilPulikal/Covid-19-App/releases)
+
 ## Screenshots
 
 <p float="center">
