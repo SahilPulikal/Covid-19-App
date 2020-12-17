@@ -3,6 +3,8 @@
 #### Developed for KC College of Engineering, Thane. 
 This will help you stay updated with the current Corona virus count in India and across the world. It also includes a self-assessment with helplines and test centers in each state and basic preventive measures
 
+#### This app is also listed on KC College's website: https://kccemsr.edu.in/event/click-on-to-download-app-for-covd-19
+
 ## Download APK
 * [Click here to Download APK](https://github.com/SahilPulikal/Covid-19-App/releases/download/v1/Kc.covid.app.apk)
 * [GitHub Releases](https://github.com/SahilPulikal/Covid-19-App/releases)
